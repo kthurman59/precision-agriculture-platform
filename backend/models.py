@@ -3,10 +3,10 @@ from sqlalchemy.sql import func
 from .database import Base
 
 class SensorReading(Base):
-    tablename = "sensor_readings"
+    __tablename__ = "sensor_readings"
 
     id = Column(Integer, primary_key=True, index=True)
-    sensor_id = Column(string, index=True)
+    sensor_id = Column(String, index=True)
     temperature = Column(Float)
     humidity = Column(Float)
     soil_moisture = Column(Float)
